@@ -31,7 +31,6 @@ jobs:
           docker build -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:latest .
           
       # Configure docker to use the gcloud command-line tool as a credential helper
-      - name: Auth Docker
       - run: |
           gcloud auth configure-docker -q
       # Push image to Google Container Registry
